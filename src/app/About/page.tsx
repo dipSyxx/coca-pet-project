@@ -9,6 +9,13 @@ import { Ideas } from './components/Ideas'
 import { Team } from './components/Team'
 import { JoinTeam } from './components/JoinTeam'
 
+type AboutPageProps = Omit<
+  typeof import('C:/programing/point/Portfolio/Next/coca-pet-project/src/app/About/page'),
+  'metadata' | 'default' | 'config' | 'generateStaticParams' | 'revalidate' | 'dynamic' | 'generateMetadata'
+> & {
+  About: never
+}
+
 export const About = () => {
   return (
     <>
