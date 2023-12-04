@@ -1,95 +1,60 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Typography } from '@/components/Typography'
+import styles from './Home.module.sass'
+import { SubtitlesPagesTextHero } from '@/components/SubtitlesPagesTextHero'
+import { Button } from '@/components/Button'
+import { BlurElements } from '@/components/BlurElements'
+import { CocaHelp } from '@/components/HelpCoca'
+import { Passion } from '@/components/Passion'
+import { StaticticsAboutComp } from '@/components/StaticticsAboutComp'
+import { LiftBusiness } from '@/components/LiftBusiness'
+import { Companies } from '@/components/Companies'
+import { Advertise } from '@/components/Advertise'
+import { TrendingNews } from '@/components/TrendingNews'
+import { Reviews } from '@/components/Reviews'
 
-export default function Home() {
+export const Home = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <main className="main">
+        <div className={styles.container}>
+          <BlurElements blurE1Top={-70} blurE1Left={-50} blurE2Right={-140} blurE2Bottom={-100} />
+          <div className={styles.container_inner}>
+            <div className={styles.inner_content}>
+              <div className={styles.content_title}>
+                <Typography fontWeight="fw-700" component="h1" variant="h1">
+                  Digitally forward creative
+                </Typography>
+              </div>
+              <SubtitlesPagesTextHero text="When it comes to interactive marketing, we`ve got you covered. Be where the world is going" />
+              <form>
+                <div className={styles.form_block}>
+                  <input placeholder="Enter your email" />
+                  <Button component="button" type="submit" variant="primary" classNameStyles="button">
+                    Try for free
+                  </Button>
+                </div>
+              </form>
+            </div>
+            <div className={styles.inner_images}>
+              <div className={styles.images_sales}>
+                <img className={styles.sales_img1} src="/main/SalesReport.png" alt="SalesReport" />
+                <img className={styles.sales_img2} src="/main/CustomerGrowth.png" alt="CustomerGrowth" />
+              </div>
+              <img className={styles.images_indicators} src="/main/Indicators.png" alt="Indicators" />
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </main>
+      <CocaHelp />
+      <Passion />
+      <StaticticsAboutComp />
+      <LiftBusiness />
+      <Companies />
+      <Advertise />
+      <TrendingNews />
+      <Reviews />
+    </>
   )
 }
+
+export default Home

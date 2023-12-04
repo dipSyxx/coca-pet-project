@@ -1,0 +1,38 @@
+//! ACCORDION
+.questions_accordion
+  cursor: pointer
+  border-bottom: 1px solid #EDEDED
+  padding-bottom: 36px
+  &:hover .questions_accordion_icon
+    transform: rotate(180deg)
+
+.questions_accordion_heading
+  display: flex
+  justify-content: space-between
+
+.questions_accordion_icon
+  transition: all 0.3s ease
+  align-items: center
+  padding: 0
+  display: flex
+  justify-content: center
+  background: none
+  outline: none
+  border: 0
+  cursor: pointer
+  & span
+    font-size: 30px
+
+.questions_accordion_content
+  overflow: hidden
+  max-height: 1000px
+  transition: max-height 1s ease-in-out
+
+.questions_accordion_content[aria-expanded="true"]
+  max-height: 0px
+  transition: max-height 1s cubic-bezier(0, 1, 0, 1)
+
+.content_text
+  max-width: 641px
+  width: 100%
+  padding-top: 16px

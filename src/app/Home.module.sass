@@ -1,0 +1,73 @@
+
+.container
+  position: relative
+  width: 100%
+  max-width: var(--container-width)
+  padding: 0 24px
+  margin: 0 auto
+
+.container_inner
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.inner_content
+  max-width: 628px
+  width: 100%
+
+.content_title
+  margin-bottom: 90px
+
+.inner_images
+  display: flex
+  flex-direction: column
+  gap: 30px
+
+.images_sales
+  position: relative
+  & img
+    border-radius: 8px
+
+.sales_img1
+  max-width: 100%
+  width: 100%
+  display: block
+  box-shadow: 20px 40px 80px 0px rgba(89, 96, 135, 0.12)
+
+.sales_img2
+  max-width: 213px
+  width: 100%
+  position: absolute
+  top: -49px
+  right: -132px
+  box-shadow: 20px 40px 80px 0px rgba(45, 51, 81, 0.12)
+
+.images_indicators
+  max-width: 100%
+  width: 100%
+  display: block
+  box-shadow: 20px 40px 80px 0px rgba(45, 51, 81, 0.12)
+
+.form_block
+  margin-top: 70px
+  display: flex
+  flex-direction: row
+  align-items: center
+  gap: 15px
+  & input
+    max-width: 280px
+    width: 100%
+    position: relative
+    border: 0
+    outline: 0
+    border-bottom: 1px solid #CED1D8
+    transition: all 0.3s ease
+    padding: 0 0 20px 0
+    background: none
+    &:focus
+      border-bottom: 1px solid #000
+      padding: 0
+    &::placeholder
+      position: absolute
+      top: 0
+      left: 0
