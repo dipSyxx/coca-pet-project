@@ -1,3 +1,6 @@
+'use client'
+
+import React from 'react'
 import { Typography } from '@/components/Typography'
 import styles from './Home.module.sass'
 import { SubtitlesPagesTextHero } from '@/components/SubtitlesPagesTextHero'
@@ -12,7 +15,7 @@ import { Advertise } from '@/components/Advertise'
 import { TrendingNews } from '@/components/TrendingNews'
 import { Reviews } from '@/components/Reviews'
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <main className="main">

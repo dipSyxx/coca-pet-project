@@ -7,7 +7,7 @@ import { BlurElements } from '@/components/BlurElements'
 import { PricingPlans } from './components/PricingPlans'
 import { Questions } from './components/Questions'
 
-export const Pricing = () => {
+const Pricing = () => {
   const [toggleActive, setToggleActive] = useState(false)
 
   const toggleSwitch = () => {

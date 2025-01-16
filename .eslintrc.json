@@ -1,20 +1,9 @@
 {
-  "plugins": [
-    "@typescript-eslint",
-    "simple-import-sort",
-    "unused-imports",
-    "jest",
-    "jest-dom",
-    "testing-library"
-  ],
+  "plugins": ["@typescript-eslint", "simple-import-sort", "unused-imports", "testing-library"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:jest/recommended",
-    "plugin:jest/style",
-    "plugin:jest-dom/recommended",
-    "plugin:jest-dom/recommended",
     "next/core-web-vitals",
     "prettier"
   ],
@@ -37,13 +26,8 @@
   "overrides": [
     // Only uses Testing Library lint rules in test files
     {
-      "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ],
-      "extends": [
-        "plugin:testing-library/react"
-      ]
+      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
     },
     {
       "files": ["src/pages/**", "*.styled.tsx", "**/__mocks__/**"],
