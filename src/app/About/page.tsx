@@ -9,7 +9,7 @@ import { Ideas } from './components/Ideas'
 import { Team } from './components/Team'
 import { JoinTeam } from './components/JoinTeam'
 
-export const About = () => {
+const About = () => {
   return (
     <>
       <main className="main">
@@ -36,3 +36,5 @@ export const About = () => {
     </>
   )
 }
+
+export default About
